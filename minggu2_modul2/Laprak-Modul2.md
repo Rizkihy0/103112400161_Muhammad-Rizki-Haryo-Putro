@@ -198,7 +198,7 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/Rizkihy0/103112400161_Muhammad-Rizki-Haryo-Putro/blob/main/minggu2_modul3/output-unguided1-modul2.png)
+![Screenshot Output Unguided 1_1](https://github.com/Rizkihy0/103112400161_Muhammad-Rizki-Haryo-Putro/blob/main/minggu2_modul2/output-unguided1-modul2.png)
 
 Program menghitung operasi matriks 3x3 menggunakan prosedur dan menu switch-case
 
@@ -232,7 +232,7 @@ int main() {
 ### Output Unguided 2 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/Rizkihy0/103112400161_Muhammad-Rizki-Haryo-Putro/blob/main/minggu2_modul3/output-unguided2-modul2.png)
+![Screenshot Output Unguided 1_1](https://github.com/Rizkihy0/103112400161_Muhammad-Rizki-Haryo-Putro/blob/main/minggu2_modul2/output-unguided2-modul2.png)
 
 Program menghitung luas persegi panjang menggunakan pointer dan menampilkan hasil setelah nilai diubah.
 
