@@ -2,17 +2,10 @@
 <p align="center">Muhammad Rizki Haryo Putro - 103112400161</p>
 
 ## Dasar Teori
-
-
-### A. <br/>
-
-
-### B. <br/>
-
-
-### c. <br/>
-
-
+### A.Abstract Data Type (ADT) <br/>
+Abstract Data Type (ADT) atau Tipe Data Abstrak adalah model matematis untuk tipe data yang didefinisikan berdasarkan perilakunya, bukan implementasinya. ADT berfokus pada apa yang dapat dilakukan oleh tipe data, bukan bagaimana cara kerjanya.
+### B.Struct (Struktur Data) <br/>
+struct digunakan untuk mengelompokkan beberapa variabel dengan tipe data berbeda ke dalam satu entitas. Ini memungkinkan pembuatan tipe data baru yang merepresentasikan objek nyata, seperti mahasiswa, pelajaran, atau barang.
 
 ## Guided 
 
@@ -139,12 +132,6 @@ int main(){
  ```
 Program ini membuat linked list berisi data bertipe float, lalu menambahkan elemen baru secara berurutan (ascending) berdasarkan nilainya.
 
-### 3. 
-
-```C++
-
-```
-Program mencari nilai maksimum dan menghitung hasil aritmatika array dengan prosedur
 
 ## Unguided 
 
@@ -259,56 +246,74 @@ Program ini digunakan untuk membuat dan menampilkan data pelajaran yang berisi n
 #include <iostream>
 using namespace std;
 
-struct Pelajaran {
-    string namaPel;
-    string kodePel;
-};
-
-Pelajaran createPelajaran(string nama, string kode) {
-    Pelajaran p;
-    p.namaPel = nama;
-    p.kodePel = kode;
-    return p;
+void tampilArray(int matriks[3][3]) { 
+    for (int baris = 0; baris < 3; baris++) {
+        for (int kolom = 0; kolom < 3; kolom++) {
+            cout << matriks[baris][kolom] << " ";
+        }
+        cout << endl;
+    }
 }
 
-void tampilPelajaran(Pelajaran p) {
-    cout << "Nama Pelajaran : " << p.namaPel << endl;
-    cout << "Kode Pelajaran : " << p.kodePel << endl;
+void tukarElemen(int matriks1[3][3], int matriks2[3][3], int cariA, int cariB) { 
+    int *ptrA = nullptr;
+    int *ptrB = nullptr;
+
+    for (int baris = 0; baris < 3; baris++) {
+        for (int kolom = 0; kolom < 3; kolom++) {
+            if (matriks1[baris][kolom] == cariA) {
+                ptrA = &matriks1[baris][kolom];
+            }
+        }
+    }
+
+    for (int baris = 0; baris < 3; baris++) {
+        for (int kolom = 0; kolom < 3; kolom++) {
+            if (matriks2[baris][kolom] == cariB) {
+                ptrB = &matriks2[baris][kolom];
+            }
+        }
+    }
+
+    if (ptrA != nullptr && ptrB != nullptr) {
+        int sementara = *ptrA;
+        *ptrA = *ptrB;
+        *ptrB = sementara;
+    } else {
+        cout << "Nilai tidak ditemukan pada salah satu array!" << endl;
+    }
 }
 
 int main() {
-    const int MAX = 5;
-    Pelajaran daftarPelajaran[MAX];
-    Pelajaran *ptr;
-    int n;
+    int matriksA[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
 
-    cout << "Masukkan jumlah pelajaran (maks 5): ";
-    cin >> n;
-    cin.ignore();
+    int matriksB[3][3] = {
+        {9, 8, 7},
+        {6, 5, 4},
+        {3, 2, 1}
+    };
 
-    if (n > MAX) {
-        cout << "Jumlah pelajaran melebihi batas!" << endl;
-        return 0;
-    }
+    cout << "Matriks A:" << endl;
+    tampilArray(matriksA);
+    cout << "Matriks B:" << endl;
+    tampilArray(matriksB);
 
-    for (int i = 0; i < n; i++) {
-        string nama, kode;
-        cout << "\nPelajaran ke-" << i + 1 << endl;
-        cout << "Masukkan nama pelajaran : ";
-        getline(cin, nama);
-        cout << "Masukkan kode pelajaran : ";
-        getline(cin, kode);
+    int nilaiA, nilaiB;
+    cout << "Masukkan nilai dari Matriks A yang ingin ditukar: ";
+    cin >> nilaiA;
+    cout << "Masukkan nilai dari Matriks B yang ingin ditukar: ";
+    cin >> nilaiB;
 
-        daftarPelajaran[i] = createPelajaran(nama, kode);
-    }
+    tukarElemen(matriksA, matriksB, nilaiA, nilaiB);
 
-    cout << "\n=== DATA SEMUA PELAJARAN ===\n";
-    ptr = daftarPelajaran;
-    for (int i = 0; i < n; i++) {
-        cout << "Data Pelajaran ke-" << i + 1 << endl;
-        tampilPelajaran(*(ptr + i));
-        cout << endl;
-    }
+    cout << "\nMatriks A setelah ditukar:" << endl;
+    tampilArray(matriksA);
+    cout << "Matriks B setelah ditukar:" << endl;
+    tampilArray(matriksB);
 
     return 0;
 }
@@ -316,12 +321,13 @@ int main() {
 ### Output Unguided 3 :
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/Rizkihy0/103112400161_Muhammad-Rizki-Haryo-Putro/blob/main/minggu3_modul3/output-unguided3-modul3.png)
+![Screenshot Output Unguided 1_1](https://github.com/Rizkihy0/103112400161_Muhammad-Rizki-Haryo-Putro/blob/main/minggu3_modul3/outputt-unguided3-modul3.png)
 
-Program ini digunakan untuk menyimpan dan menampilkan beberapa data pelajaran (maksimal 5 data), menggunakan array struct, pointer, dan fungsi.
+Program ini berfungsi untuk menukar elemen (nilai) antara dua buah matriks 3×3 berdasarkan nilai yang dimasukkan pengguna.
 
 ## Kesimpulan
-
+Kesimpulan dari praktikum Modul 3 tentang Abstract Data Type (ADT) adalah bahwa ADT merupakan konsep penting dalam pemrograman yang memisahkan antara definisi perilaku suatu tipe data dengan implementasinya. Melalui penerapan ADT menggunakan struct, pointer, dan konsep modular programming, program dapat dibuat lebih terstruktur, efisien, serta mudah dikembangkan. Penggunaan struct memungkinkan pembuatan tipe data baru yang merepresentasikan objek nyata, sementara pointer digunakan untuk membentuk struktur data dinamis seperti linked list. Selain itu, penerapan pemrograman modular dengan pemisahan file header, implementasi, dan program utama membantu meningkatkan keterbacaan dan pemeliharaan kode. Secara keseluruhan, praktikum ini memberikan pemahaman tentang bagaimana konsep ADT dapat digunakan untuk membangun program yang rapi, fleksibel, dan mudah dikelola.
 
 ## Referensi
-[1] <br>
+[1] Kadir, Abdul. Algoritma dan Pemrograman Menggunakan C++. Yogyakarta: Andi, 2020. <br>
+[2] Nugroho, Adi. Struktur Data dan Algoritma Menggunakan C++. Yogyakarta: Andi, 2018. <br>
