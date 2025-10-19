@@ -4,6 +4,9 @@
 ## Dasar Teori
 Linked List merupakan struktur data dinamis yang terdiri atas kumpulan elemen (node) yang saling terhubung melalui pointer. Setiap node berisi data dan pointer yang menunjuk ke node berikutnya. Pada Singly Linked List, hubungan antar-node hanya searah, dan node terakhir menunjuk ke NULL sebagai penanda akhir. Struktur data ini memungkinkan penambahan dan penghapusan data secara efisien tanpa perlu memindahkan elemen lain seperti pada array, meskipun akses data harus dilakukan secara berurutan dari node pertama.
 
+### A.Pengertian Singly Linked List <br/>
+Singly Linked List adalah struktur data dinamis yang terdiri dari rangkaian node di mana setiap node berisi data dan pointer yang menunjuk ke node berikutnya. Tidak seperti array yang memiliki ukuran tetap, Singly Linked List memungkinkan penambahan atau penghapusan elemen secara fleksibel tanpa perlu menggeser data lainnya. Arah hubungan antar-node bersifat searah, yaitu dari node pertama (head) menuju node terakhir yang menunjuk ke NULL sebagai penanda akhir daftar.
+
 ## Guided 
 ### 1. Guided 1
 
