@@ -4,7 +4,7 @@
 ## Dasar Teori
 Struktur data adalah metode untuk menyimpan dan mengelola data agar dapat diakses dan diproses dengan efisien. Dalam pemrograman, struktur data membantu menyusun data supaya lebih teratur dan mempermudah operasi seperti pencarian, penyimpanan, serta penghapusan. Salah satu struktur data yang banyak digunakan adalah Queue, yang sering dijumpai dalam berbagai sistem komputasi maupun situasi dunia nyata seperti antrean layanan.
 
-### A.  <br/>
+### A. Queue <br/>
 Queue adalah struktur data linear yang bekerja menggunakan prinsip FIFO (First In First Out), artinya elemen yang pertama dimasukkan akan menjadi elemen pertama yang diambil. Queue memiliki dua operasi utama yaitu enqueue (menambahkan data) dan dequeue (menghapus data). Struktur queue dapat diimplementasikan menggunakan array atau linked list. Pada implementasi array, sering digunakan konsep circular queue agar memori digunakan lebih efisien. Queue banyak diterapkan dalam sistem komputer seperti antrian proses pada CPU, buffer data, dan algoritma pencarian BFS.
 
 ## Guided 
