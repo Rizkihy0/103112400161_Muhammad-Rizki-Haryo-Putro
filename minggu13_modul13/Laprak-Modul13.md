@@ -695,13 +695,13 @@ int main(){
 ### Output Unguided 1 :
 
 ##### Output 
-A. output Insert
+###### A. output Insert
 ![Screenshot Output Unguided 1_1](https://github.com/Rizkihy0/103112400161_Muhammad-Rizki-Haryo-Putro/blob/main/minggu13_modul13/output1-unguided1-modul13.png)
 
-B. output Search Hewan
+###### B. output Search Hewan
 ![Screenshot Output Unguided 1_2](https://github.com/Rizkihy0/103112400161_Muhammad-Rizki-Haryo-Putro/blob/main/minggu13_modul13/output2-unguided1-modul13.png)
 
-C. output Delete node G004
+###### C. output Delete node G004
 ![Screenshot Output Unguided 1_3](https://github.com/Rizkihy0/103112400161_Muhammad-Rizki-Haryo-Putro/blob/main/minggu13_modul13/output3-unguided1-modul13.png)
 
 Program ini mengimplementasikan struktur data multi linked list menggunakan C++. Data disusun secara hierarkis, dengan golongan hewan sebagai parent dan data hewan sebagai child. Program menyediakan fungsi untuk menambah, menghapus, menampilkan, serta mencari data hewan berdasarkan kriteria tertentu. Implementasi ini menunjukkan penerapan konsep linked list bertingkat dalam pengelolaan data yang saling berelasi.
